@@ -68,3 +68,7 @@ def suceslogin(request):
 def inicio(request):
     data = {}
     return render(request, 'INDES.html', data)
+
+def agendamento(request):
+    data = {}
+    return render(request, 'AGENDAMENTO.html', data)

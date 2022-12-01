@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento</title>
+    <link rel="stylesheet" href="{% static 'css/agenda.css' %}">
+</head>
+
+<body>
+<div id="main-container">
+<!--FORMULÁRIO DE AGENDAMENTO-->
+<h1>AGENDAMENTOS</h1>
+
+<form>
+
+<form id="register-form" action="">
+    <div class="full-box">
+    <label for="nome">NOME:</label>
+    <input id="nome" type="text" name="nome" placeholder="DIGITE SEU NOME COMPLETO"
+    required autofocus /><br/>
+    </div>
+
+    <div class="half-box spacing">
+    <label for="email">EMAIL:</label>
+    <input id="email" type="email" name="email" placeholder="nomeuser@gmail.com"/>
+    </div>
+
+    <div class="half-box">
+    <label for="senha">SENHA:</label>
+    <input id="senha" type="password" name="senha" placeholder="caracteres e números" pattern="@\#\%">
+    </div>
+
+    <div class="half-box">
+    <label for="data">DATA:</label>
+    <input id="data" type="date" name="data"/>
+    </div>
+
+    <div class="half-box spacing">
+    <label for="hora">HORA:</label>
+    <input id="hora" type="time" name="hora"/>
+    </div>
+
+    <div class="full-box">
+        <label for="telefone">TELEFONE:</label>
+        <input id="telefone" type="tel" name="telefone" placeholder="(11)11111-1111"/>
+        </div>
+
+</form>
+
+</body>
+
+</html>

@@ -1,10 +1,11 @@
 from django.db import models
 
-# Create your models here.
 class Usuario(models.Model):
     email = models.CharField(max_length=30)
     senha = models.CharField(max_length=10)
     meta = models.IntegerField()
+
+
 
 class Funcionario(models.Model) :
     cpf = models.CharField (max_length=11)
@@ -12,7 +13,51 @@ class Funcionario(models.Model) :
     ativo = models.BooleanField(max_length= 1) 
     gerente = models.BooleanField
 
+
+
 class Agendamento (models.Model):
     data_agendamento = models.IntegerField()
     horário_agendamento = models.IntegerField()
-    funcionario = models.ForeignKey(Funcionario)
+    funcionario = models.ForeignKey(Funcionario,on_delete=models.CASCADE)
+
+
+
+class Cadastro (models.Model):
+    nome = models.CharField(max_length=10)
+    sobrenome = models.CharField(max_length=50) 
+    email = models.CharField(max_length=30) 
+    senha = models.CharField(max_length=10) 
+    telefone =  models.IntegerField(11) 
+    data_de_nasc = models.IntegerField()
+    endereco = models.CharField(max_length=30)
+
+
+
+class Endereco (models.Model):
+    rua  = models.CharField(max_length=40)
+    número  = models.IntegerField(4) 
+    cidade =  models.CharField()
+    cep = models.IntegerField(8)
+
+
+
+class Login (models.Model):
+    usuario = models.CharField(max_length=20)
+    senha = models.CharField(max_length=10)
+
+
+
+class Procedimento(models.Model):
+    descricao = models.CharField(255) 
+    data_proced = models.IntegerField()
+    tempo_proced  = models.IntegerField()
+    valor = models.CharField(max_length=5)
+
+
+
+class Salao(models.Model):
+    nome = models.CharField(15) 
+    endereco = models.CharField(max_length=30)
+    funcionario  = models.IntegerField()
+    ativo = models.BooleanField(max_length= 1)
+    
