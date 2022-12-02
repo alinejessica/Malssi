@@ -1,11 +1,11 @@
 from django.db import models
 
-
 class Funcionario(models.Model) :
     cpf = models.CharField (max_length=11)
     procedimento = models.ForeignKey(max_length=20)
     ativo = models.BooleanField(max_length= 1) 
     gerente = models.BooleanField
+
 
 
 class Cadastro (models.Model):
@@ -18,11 +18,12 @@ class Cadastro (models.Model):
     endereco = models.CharField(max_length=30)
 
 
+
 class Agendamento (models.Model):
     data_agendamento = models.IntegerField()
     horário_agendamento = models.IntegerField()
     funcionario = models.ForeignKey(Funcionario,on_delete=models.CASCADE)
-    cadastro = models.ForeignKey(Cadastro,on_delete=models.CASCADE)
+    cadastro= models.ForeignKey(Cadastro,on_delete=models.CASCADE)
 
 
 
@@ -31,12 +32,6 @@ class Endereco (models.Model):
     número  = models.IntegerField(4) 
     cidade =  models.CharField()
     cep = models.IntegerField(8)
-
-
-
-class Login (models.Model):
-    usuario = models.CharField(max_length=20)
-    senha = models.CharField(max_length=10)
 
 
 
@@ -53,4 +48,3 @@ class Salao(models.Model):
     endereco = models.CharField(max_length=30)
     funcionario  = models.IntegerField()
     ativo = models.BooleanField(max_length= 1)
-    
