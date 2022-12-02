@@ -2,7 +2,7 @@ from django.db import models
 
 class Funcionario(models.Model) :
     cpf = models.CharField (max_length=11)
-    procedimento = models.ForeignKey(max_length=20)
+    procedimento = models.CharField(max_length=20)
     ativo = models.BooleanField(max_length= 1) 
     gerente = models.BooleanField
 
