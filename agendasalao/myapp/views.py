@@ -1,9 +1,9 @@
 from django.shortcuts import render
 
 # Create your views here.
-def index(request):
+def inicio(request):
     data = {}
-    return render(request, 'index.html', data)
+    return render(request, 'INDES.html', data)
 
 def home(request):
     data = {}
@@ -64,10 +64,10 @@ def profile(request):
 def suceslogin(request):
     data = {}
     return render(request, 'suceslogin.html', data)
-    
-def inicio(request):
+       
+def index(request):
     data = {}
-    return render(request, 'INDES.html', data)
+    return render(request, 'index.html', data)
 
 def agendamento(request):
     data = {}
