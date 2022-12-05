@@ -7,7 +7,7 @@ class LoginForm(forms.ModelForm):
 
     class Meta:
         model = Usuario
-        fields = ['usuario', 'senha', ]
+        fields = ['email', 'senha', ]
 
 
 class addAgendamentoForm(forms.ModelForm):
@@ -18,5 +18,5 @@ class addAgendamentoForm(forms.ModelForm):
 
 class editMetaForm(forms.ModelForm):
     class Meta:
-        model = Usuario
-        fields = ['meta', ]
+        model = Procedimento 
+        fields = ['descricao', 'data_proced', 'tempo_proced', 'valor']
