@@ -39,6 +39,7 @@ main {
     width: 90%;
     float: right;
     height: 40%;
+    max-width: 50px; 
     
 }
 .redes-sociais ul li{
