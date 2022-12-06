@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'agendasalao.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django',
+        'NAME': 'agendasalao',
         'USER':'root',
-        'PASSWORD': 'Senai2019,',
+        'PASSWORD': 'jecasilva217@',
         'HOST': '127.0.0.1',
         'PORT': '3306',    
     }
