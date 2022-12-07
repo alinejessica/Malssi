@@ -11,7 +11,7 @@
 <body>
     <div class="content">
         <div class="left-content">
-            <form class="form" name="cad_user" method="post" action="/docad/"method="post" action="./">
+            <form class="form" name="cad_user" method="post" action="/docad/"method="post" action="{% url 'inicio' %}">
                 {% csrf_token %}
                 <div class="form-single">
                     <label class="label">Usuário</label>
