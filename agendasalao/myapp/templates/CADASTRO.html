@@ -14,7 +14,7 @@
   <div id="main-container">
    <!--FORMULÁRIO DE CADASTRO-->
     <h1>Cadastre-se para acessar o site</h1>
-    <form id="register-form" action="/inicio">
+    <form id="register-form" action="{% url 'suceslogin' %}">
       <div class="full-box">
         <label for="email">SEU E-MAIL</label>
         <input type="email" name="email" id="email" placeholder="augusto138@gmail.com" data-min-length="2" data-email-validate>
@@ -47,7 +47,7 @@
 
       <div>
         <input type="checkbox" name="agreement" id="agreement">
-        <label for="agreement" id="agreement-label"> EU LI E CONCORDO COM OS <a href="#">TERMOS DE USO DO SITE</a></label>
+        <label for="agreement" id="agreement-label"> EU LI E CONCORDO COM OS <a href="{% url 'politica' %}">TERMOS DE USO DO SITE</a></label>
       </div>
 
 
@@ -57,8 +57,9 @@
       
       <p class="link">  
         Já tem conta?
-        <a href="Loginprincipal.html"> ENTRAR </a>
+        <a href="{% url 'login' %}"> ENTRAR </a>
       </p>
     </form>
   </div>
 </body>
+<script src="{% static 'js/cadastro.js' %}"></script>
