@@ -73,6 +73,6 @@ def agendamento(request):
     data = {}
     return render(request, 'AGENDAMENTO.html', data)
 
-def politica(request):
+def política(request):
     data = {}
-    return render(request, 'politica.htm
+    return render(request, 'política.html')
