@@ -72,3 +72,7 @@ def index(request):
 def agendamento(request):
     data = {}
     return render(request, 'AGENDAMENTO.html', data)
+
+def politica(request):
+    data = {}
+    return render(request, 'politica.htm
